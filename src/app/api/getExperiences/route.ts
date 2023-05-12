@@ -8,9 +8,9 @@ const query = groq`
         ...,
         technologies[]->
     }
-`
+`;
 
 export async function GET() {
-    const experience: Experience[] = await sanityClient.fetch(query)
-    return NextResponse.json({ experience })
+  const experience: Experience[] = await sanityClient.fetch(query);
+  return NextResponse.json({ experience });
 }

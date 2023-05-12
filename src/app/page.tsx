@@ -13,7 +13,6 @@ import { fetchSocials } from "@/utils/fetchSocials";
 import Image from "next/image";
 
 export default async function Home() {
-
   const pageInfo = await fetchPageInfo();
   const projects = await fetchProjects();
   const skills = await fetchSkills();
@@ -22,37 +21,36 @@ export default async function Home() {
 
   return (
     <div className="bg-[#2f3640] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#e84118]/80">
-
-      <Header socials={socials}/>
+      <Header socials={socials} />
 
       {/* Hero */}
       <section id="hero" className="snap-start">
-        <Hero pageInfo={pageInfo}/>
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About pageInfo={pageInfo}/>
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience experiences={experiences}/>
+        <WorkExperience experiences={experiences} />
       </section>
 
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills skills={skills}/>
+        <Skills skills={skills} />
       </section>
 
       {/* Projects */}
       <section id="projects" className="snap-start">
-        <Projects projects={projects}/>
+        <Projects projects={projects} />
       </section>
 
       {/* Contact Me */}
       <section id="contact" className="snap-start">
-        <ContactMe pageInfo={pageInfo}/>
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       <a href="#hero">
@@ -68,7 +66,6 @@ export default async function Home() {
           </div>
         </footer>
       </a>
-
     </div>
-  )
+  );
 }

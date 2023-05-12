@@ -8,9 +8,9 @@ const query = groq`
         ...,
         socials[]->
     }
-`
+`;
 
 export async function GET() {
-    const pageInfo: PageInfo[] = await sanityClient.fetch(query)
-    return NextResponse.json({ pageInfo })
+  const pageInfo: PageInfo[] = await sanityClient.fetch(query);
+  return NextResponse.json({ pageInfo });
 }
